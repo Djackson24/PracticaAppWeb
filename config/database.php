@@ -1,9 +1,9 @@
 <?php
 
-$host="ec2-54-225-241-25.compute-1.amazonaws.com";
-$username="mxmrcpimlypcik";
-$password="9fbdf45b1abbcd32142d3f2eff808a9d93e64933a92831069452b679cba17dbe";
-$database="d4celb6i3m753l";
+$host="ec2-107-20-211-10.compute-1.amazonaws.com";
+$username="rwcwcolpvargbt";
+$password="c1104f041b58db551e0befad786b3bddff658ce032b2afe238f69041ef587974";
+$database="d3psgkhron1i41";
 //HOla
 return [
 
