@@ -16,14 +16,15 @@ Route::get('/', function () {
 });
 
 
-Route::get('/categories', function () {
-    return "CATEGORIES HOLI";
-});
+Route::get('categories/{name}', function($name)
+{
+    
+})->where('name','[A-Za-z]+');
 
-Route::get('/movements', function () {
-    return "movements holi";
-});
-
+Route::get('movements/{id}', function($id)
+{
+    
+})->where('id', '[0-9]+');
 
 Auth::routes();
 
