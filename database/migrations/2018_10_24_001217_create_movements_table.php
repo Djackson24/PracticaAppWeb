@@ -22,7 +22,7 @@ class CreateMovementsTable extends Migration
             $table->string('desciption');
             $table->unsignedInteger('money');
             $table->string('image');
-            $table->unsignadInteger('user_id');
+            $table->unsignedInteger('user_id');
         });
     }
 
