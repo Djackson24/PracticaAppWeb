@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/categories', function () {
+    return "CATEGORIES HOLI";
+});
+
+Route::get('/movements', function () {
+    return "movements holi";
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
