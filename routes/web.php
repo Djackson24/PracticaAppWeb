@@ -19,7 +19,7 @@ Route::get('/movements',function(){
     return App\Movement::all();
 });
 
-Route::get('movements\id\{id}',function($id){
+Route::get('/movements/id/{id}',function($id){
     $us = App\Movement::find($id);
     return $us;
 })->where('id','[0-9]+');
