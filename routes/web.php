@@ -21,7 +21,6 @@ Route::get('categories/{id}', function ($id) {
     return DB::$table($categories);
 })->where($id,'[1]+');
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
