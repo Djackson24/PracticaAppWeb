@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('movements',function(){
+    return App\movements::all();
+});
+
+Route::get('movements\id\{id}',function($id){
+    $us = App\movements::find($id);
+    return $us;
+})->where('id','[0-9]+');
+
+
 
 Auth::routes();
 
