@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('movements',function(){
-    return App\movements::all();
+Route::get('/movements',function(){
+    return App\Movement::all();
 });
 
 Route::get('movements\id\{id}',function($id){
