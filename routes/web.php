@@ -24,6 +24,13 @@ Route::get('/movements/id/{id}',function($id){
     return $us;
 })->where('id','[0-9]+');
 
+Route::get('/movements/desciption/{desciption}',function($desciption){
+    $us = App\Movement::where('desciption',$desciption)->get();
+    return $us;
+})->where('desciption','[a-z]+');
+
+
+
 
 
 Auth::routes();
