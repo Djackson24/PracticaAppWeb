@@ -21,13 +21,7 @@ Route::get('/movements',function(){
 
 Route::get('/movements/id/{id}',function($id){
     $us = App\Movement::find($id);
-    if($us <=9){
-        return $us;
-    }
-    else{
-        return view('welcome');
-    }
-    
+    return $us;
 })->where('id','[0-9]+');
 
 Route::get('/movements/desciption/{desciption}',function($desciption){
