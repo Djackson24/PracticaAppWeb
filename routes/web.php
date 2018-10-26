@@ -32,7 +32,7 @@ Route::get('/movements/desciption/{desciption}',function($desciption){
 Route::get('/movements/movement_date/{year?}/{month?}/{day?}',function($movement_date){
     $fecha = App\Movement::where('movement_date',$movement_date)->get();
     return $fecha;
-})->where('movement_date','d{4}[\-\/\s]?((((0[13578])|(1[02]))[\-\/\s]?(([0-2][0-9])|(3[01])))|(((0[469])|(11))[\-\/\s]?(([0-2][0-9])|(30)))|(02[\-\/\s]?[0-2][0-9]))');
+});
 
 
 
