@@ -27,12 +27,12 @@ Route::get('/movements/id/{id}',function($id){
 Route::get('/movements/desciption/{desciption}',function($desciption){
     $des = App\Movement::where('desciption',$desciption)->get();
     return $des;
-})->where('desciption','[a-z]','[A-Z]');
+})->where('desciption','[A-Z]');
 
 Route::get('/movements/movement_date/{year?}/{month?}/{day?}',function($movement_date){
     $fecha = App\Movement::where('movement_date',$movement_date)->get();
     return $fecha;
-})->where('movement_date','[year [0-9]+, month [0-9]+, day[0-9]+]');
+})->where('movement_date','d{4}[\-\/\s]?((((0[13578])|(1[02]))[\-\/\s]?(([0-2][0-9])|(3[01])))|(((0[469])|(11))[\-\/\s]?(([0-2][0-9])|(30)))|(02[\-\/\s]?[0-2][0-9]))');
 
 
 
