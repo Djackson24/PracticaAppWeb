@@ -14,25 +14,26 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/movements',function(){
+Route::get('usuarios', function () {
+    return DB::table('users')->get();
+});
+Route::get('movements', function (){
     return App\Movement::all();
 });
+Route::get('movements/id/{id}',function ($id){
+    $usuarios = App\Movement::find($id);
+    return $usuarios;
 
-Route::get('/movements/id/{id}',function($id){
-    $us = App\Movement::find($id);
-    return $us;
-})->where('id','[0-9]+');
+})->where(['id' => '[\d]+']);
 
-Route::get('/movements/desciption/{desciption}',function($desciption){
-    $des = App\Movement::where('desciption',$desciption)->get();
-    return $des;
-})->where('desciption','[A-Z]');
-
-Route::get('/movements/movement_date/{year?}/{month?}/{day?}',function($movement_date){
-    $fecha = App\Movement::where('movement_date',$movement_date)->get();
-    return $fecha;
+Route::get('movements/desc/{desciption}',function ($desciption){
+    return App\Movement::where('desription',$desciption)->get();
 });
+
+Route::get('movements/fecha/{movement_date}',function ($movement_date){
+    return App\Movement::where('movement_date',$movement_date)->get();
+});
+
 
 
 
